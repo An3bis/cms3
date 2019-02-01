@@ -100,3 +100,160 @@
 [Fri Feb 01 17:52:23.948823 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33182] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
 [Fri Feb 01 17:52:23.948856 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33182] PHP   3. Engine\\Controller->loadController() /var/www/mysite/engine/Router/Router.class.php:36
 [Fri Feb 01 17:52:23.948888 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33182] PHP   4. Engine\\Controller->getControllerPath() /var/www/mysite/engine/Controller.class.php:8
+[Fri Feb 01 18:11:35.788946 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33332] PHP Fatal error:  Uncaught Error: Class 'Engine\\Model\\Menu' not found in /var/www/mysite/engine/Controllers/Index.controller.php:12\nStack trace:\n#0 /var/www/mysite/engine/Router/Router.class.php(43): Controller\\Index->__construct()\n#1 /var/www/mysite/public_html/index.php(8): Engine\\Router\\Router->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Controllers/Index.controller.php on line 12
+[Fri Feb 01 18:13:37.206696 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:13:37.206739 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP Stack trace:
+[Fri Feb 01 18:13:37.206752 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:13:37.206763 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:13:37.206773 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:13:37.206782 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:13:37.206792 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:13:37.206800 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:13:37.206809 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33350] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:13:58.827924 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:13:58.827955 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:13:58.827965 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:13:58.827972 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:13:58.827979 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:13:58.827985 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:13:58.827991 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:13:58.827998 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:13:58.828004 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:13:59.472168 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:13:59.472222 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:13:59.472238 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:13:59.472250 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:13:59.472261 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:13:59.472271 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:13:59.472282 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:13:59.472292 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:13:59.472302 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:00.224296 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:00.224338 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:00.224353 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:00.224365 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:00.224377 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:00.224387 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:00.224397 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:00.224408 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:00.224418 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:00.663752 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:00.663793 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:00.663809 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:00.663820 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:00.663831 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:00.663840 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:00.663851 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:00.663861 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:00.663889 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:00.990876 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:00.990904 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:00.990915 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:00.990924 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:00.990932 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:00.990939 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:00.990946 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:00.990954 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:00.990961 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:01.254451 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:01.254489 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:01.254504 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:01.254517 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:01.254527 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:01.254537 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:01.254548 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:01.254558 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:01.254568 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:01.550987 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:01.551016 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:01.551026 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:01.551035 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:01.551043 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:01.551050 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:01.551072 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:01.551080 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:01.551087 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:01.815827 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:01.815863 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:01.815877 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:01.815889 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:01.815900 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:01.815909 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:01.815920 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:01.815930 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:01.815940 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:02.095015 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:02.095052 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:02.095066 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:02.095078 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:02.095089 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:02.095099 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:02.095109 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:02.095120 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:02.095136 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:02.350474 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:02.350508 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP Stack trace:
+[Fri Feb 01 18:14:02.350522 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:02.350550 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:02.350562 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:02.350571 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:02.350582 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:02.350592 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:02.350601 2019] [php7:notice] [pid 18613] [client 127.0.0.1:33356] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:14:28.918117 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:14:28.918162 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP Stack trace:
+[Fri Feb 01 18:14:28.918171 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:14:28.918179 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:14:28.918185 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:14:28.918191 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:28.918197 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:14:28.918203 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:14:28.918209 2019] [php7:notice] [pid 18182] [client 127.0.0.1:33364] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:15:06.648492 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP Fatal error:  Class 'Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 2
+[Fri Feb 01 18:15:06.648542 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP Stack trace:
+[Fri Feb 01 18:15:06.648558 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:15:06.648571 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:15:06.648583 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:15:06.648593 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:15:06.648604 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:15:06.648615 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:15:06.648626 2019] [php7:notice] [pid 18517] [client 127.0.0.1:33366] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:15:30.286247 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:15:30.286290 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP Stack trace:
+[Fri Feb 01 18:15:30.286299 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:15:30.286305 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:15:30.286313 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:15:30.286319 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:15:30.286325 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:15:30.286331 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:15:30.286336 2019] [php7:notice] [pid 18826] [client 127.0.0.1:33370] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:15:56.364123 2019] [php7:notice] [pid 18514] [client 127.0.0.1:33376] PHP Fatal error:  Uncaught Error: Class 'Engine\\Model\\Menu' not found in /var/www/mysite/engine/Controllers/Index.controller.php:12\nStack trace:\n#0 /var/www/mysite/engine/Router/Router.class.php(43): Controller\\Index->__construct()\n#1 /var/www/mysite/public_html/index.php(8): Engine\\Router\\Router->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Controllers/Index.controller.php on line 12
+[Fri Feb 01 18:16:36.758585 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:16:36.758629 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP Stack trace:
+[Fri Feb 01 18:16:36.758645 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:16:36.758658 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:16:36.758670 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:16:36.758681 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:16:36.758692 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:16:36.758703 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:16:36.758714 2019] [php7:notice] [pid 18518] [client 127.0.0.1:33380] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:20:22.863518 2019] [php7:notice] [pid 18187] [client 127.0.0.1:33386] PHP Fatal error:  Uncaught Error: Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php:8\nStack trace:\n#0 /var/www/mysite/engine/Controllers/Index.controller.php(12): Engine\\Model\\Menu::getMenu()\n#1 /var/www/mysite/engine/Router/Router.class.php(43): Controller\\Index->__construct()\n#2 /var/www/mysite/public_html/index.php(8): Engine\\Router\\Router->run()\n#3 {main}\n  thrown in /var/www/mysite/engine/Models/Menu.model.php on line 8
+[Fri Feb 01 18:21:00.252436 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP Fatal error:  Class 'Engine\\Model\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:21:00.252501 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP Stack trace:
+[Fri Feb 01 18:21:00.252516 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:21:00.252528 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:21:00.252540 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:21:00.252550 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:21:00.252560 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:21:00.252571 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:21:00.252581 2019] [php7:notice] [pid 18520] [client 127.0.0.1:33390] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 01 18:22:40.957108 2019] [php7:notice] [pid 18186] [client 127.0.0.1:33398] PHP Fatal error:  Uncaught Error: Class 'Engine\\Model\\Menu' not found in /var/www/mysite/engine/Controllers/Index.controller.php:12\nStack trace:\n#0 /var/www/mysite/engine/Router/Router.class.php(43): Controller\\Index->__construct()\n#1 /var/www/mysite/public_html/index.php(8): Engine\\Router\\Router->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Controllers/Index.controller.php on line 12
+[Fri Feb 01 18:23:18.219057 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP Fatal error:  Class 'Engine\\Models\\Model' not found in /var/www/mysite/engine/Models/Menu.model.php on line 4
+[Fri Feb 01 18:23:18.219100 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP Stack trace:
+[Fri Feb 01 18:23:18.219114 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   1. {main}() /var/www/mysite/public_html/index.php:0
+[Fri Feb 01 18:23:18.219124 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   2. Engine\\Router\\Router->run() /var/www/mysite/public_html/index.php:8
+[Fri Feb 01 18:23:18.219133 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   3. Controller\\Index->__construct() /var/www/mysite/engine/Router/Router.class.php:43
+[Fri Feb 01 18:23:18.219142 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   4. spl_autoload_call() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:23:18.219151 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Controllers/Index.controller.php:12
+[Fri Feb 01 18:23:18.219160 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 01 18:23:18.219168 2019] [php7:notice] [pid 18185] [client 127.0.0.1:33406] PHP   7. include() /var/www/mysite/vendor/composer/ClassLoader.php:444

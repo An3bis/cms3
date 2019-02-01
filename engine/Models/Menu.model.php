@@ -1,8 +1,10 @@
 <?php
-class Menu extends DB
+namespace Engine\Models;
+
+class Menu extends Model
 {
-	public function getMenu()
+	public static function getMenu()
 	{
-		DB::queryArr('select * from menu');
+		Model::queryArr('select * from menu');
 	}
 }

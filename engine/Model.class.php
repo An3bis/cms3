@@ -1,9 +1,9 @@
 <?php 
-namespace Engine\Model;
+namespace Engine;
 
 use PDO;
 
-class DB {
+class Model {
 	
 	private static $host 		= "localhost";
 	private static $base 		= "store";
