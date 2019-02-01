@@ -12,6 +12,6 @@ class Controller
 
 	private function getControllerPath(string $controllerName) : string
 	{
-		return ROOT.'controller/'.$controllerName.'.controller.php';
+		return ROOT.'engine/Controllers/'.$controllerName.'.controller.php';
 	}	
 }

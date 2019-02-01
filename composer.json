@@ -1,0 +1,15 @@
+{
+    "name": "root/mysite",
+    "authors": [
+        {
+            "name": "Wembley",
+            "email": "golevv.rustam@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+    	"classmap": [
+    		"./"
+    	]
+    }
+}

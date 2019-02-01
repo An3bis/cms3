@@ -1,5 +1,5 @@
 <?php 
-namespace Engine;
+namespace Engine\Model;
 
 use PDO;
 
@@ -7,8 +7,8 @@ class DB {
 	
 	private static $host 		= "localhost";
 	private static $base 		= "store";
-	private static $user 		= "root";
-	private static $pass 		= "";
+	private static $user 		= "wembley";
+	private static $pass 		= "wembley0372";
 	private static $charset 	= "utf8";
 	private static $settings	=	[	
 									PDO::ATTR_ERRMODE 				=> PDO::ERRMODE_EXCEPTION,
@@ -45,12 +45,12 @@ class DB {
 		return self::$db->prepare($query)->execute($params)->fetchAll(PDO::FETCH_COLUMN);	
     }
 	
-	public static function getAll(string $query, array $params)
+	public static function queryArr(string $query, array $params = null)
 	{
 		self::connect();
 		
 		$tmp = self::$db->prepare($query);
-		$tmp->execute($params);
+		(!is_null($params)) ? $tmp->execute($params) : $tmp->execute();
 		
 		return $tmp->fetchAll(PDO::FETCH_ASSOC);
 	}	
