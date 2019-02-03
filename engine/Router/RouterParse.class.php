@@ -9,25 +9,37 @@ class RouterParse extends Router
 
 	public function parseURL(array $routes) 
 	{
-		// explode url
-		$helper = new RouterHelper;
-
     	$this->url['uri'] = substr($_SERVER['REQUEST_URI'], 1);
     	$this->url['uri'] = trim($this->url['uri'], '/');
     	$expURI = explode('/', $this->url['uri']);
-    	$this->url['controller'] = $helper->prepareString($expURI[0]);
 
     	// if url == '/' load home
-		if(empty($this->url['uri'])) 
+		if(empty($expURI[0])) 
 			$this->url['controller'] = 'Index';  
 		else { // if not home
 
-	    	foreach($routes['GET'] as $route => $controller){
+	    	foreach($routes as $routes) {
+	    		foreach($routes as $route => $controller) {
+	    			
+	    			var_dump($this->url['uri']);
+	    			var_dump($this->convertRoute($route));
+	    			var_dump(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri']));
+	    			echo '<br/>';
+
+					if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'])) {
+						echo 'nice.';
+						break;
+					}
+	    		}
+	    	}
+	    	exit();
+
+/*
 	    		$route = trim($route, '/');
 	    		$expKey = explode('/', $route);	  		
 
 	    		// equal controller in url with routes
-	    		if($this->url['controller'] == $helper->prepareString($expKey[0])) {    			
+	    		if($this->url['controller'] == RouterHelper::prepareString($expKey[0])) {    			
 					$routMatches = $this->readParams($route);
 
 					if(!empty($routMatches))
@@ -38,7 +50,8 @@ class RouterParse extends Router
 		    		
 		    		break; // stop foreach
 		    	} 
-	    	}
+*/
+
 		}
 	}	
 
@@ -66,5 +79,24 @@ class RouterParse extends Router
 			preg_match_all($replacementPattern, $this->url['uri'], $routMatches, PREG_SET_ORDER);
 			return $routMatches;
 		}		
-	}		
+	}	
+
+    private function convertRoute($route)
+    {
+        if (strpos($route, '{') === false)
+        	return $route;
+
+        return preg_replace_callback('#{(\w+):(\w+)}#', 
+              array($this, 'replaceRoute'), $route);
+    }
+
+    private function replaceRoute($match)
+    {
+        $name = $match[1];    // id
+        $pattern = $match[2]; // nums
+ 
+        $replaced = str_replace($this->routerPattern, $this->routerReplace, $pattern);
+
+        return $replaced;
+    }    		
 }

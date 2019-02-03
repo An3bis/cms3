@@ -48,7 +48,7 @@ class Model {
 	public static function queryArr(string $query, array $params = null)
 	{
 		self::connect();
-		
+
 		$tmp = self::$db->prepare($query);
 		(!is_null($params)) ? $tmp->execute($params) : $tmp->execute();
 		

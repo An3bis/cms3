@@ -7,9 +7,9 @@ use Engine\Controller;
 class Router
 {
     protected $routerPattern = [
-        '{all}',
-        '{nums}',
-        '{chars}'
+        'all',
+        'nums',
+        'chars'
     ];
 
     protected $routerReplace = [
@@ -21,7 +21,8 @@ class Router
 	protected $routes = [
 		'GET' => [
 			'/' 				=> 'Index',
-			'/about/{nums}/' 	=> 'About@aboutCharact'
+			'/about/{id:nums}/' 	=> 'About@aboutCharact',
+			'/about/' => 'About'
 		]
 	];
 

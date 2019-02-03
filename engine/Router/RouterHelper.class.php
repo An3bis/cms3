@@ -3,7 +3,7 @@ namespace Engine\Router;
 
 class RouterHelper
 {
- 	public function prepareString(string $string) : string
+ 	public static function prepareString(string $string) 
 	{
 		$var = htmlentities(strtolower($string));
 		return ucfirst($var);
