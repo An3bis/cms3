@@ -6,29 +6,34 @@ use Engine\Router\RouterHelper;
 class RouterParse extends Router
 {
 	private $url;	
+	private $args = [];
 
 	public function parseURL(array $routes) 
 	{
     	$this->url['uri'] = substr($_SERVER['REQUEST_URI'], 1);
     	$this->url['uri'] = trim($this->url['uri'], '/');
-    	$expURI = explode('/', $this->url['uri']);
-
-    	$this->url['controller'] = 'Index';
+    	$this->url['controller'] = null;
 
     	foreach($routes as $routes) {
     		foreach($routes as $route => $controller) {
 				if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'], $matches)) {
-					//$this->args
-					//var_dump($matches); die();
-					//var_dump($this->args);
-			
+					unset($matches[0]);
+					var_dump($this->args);
+					die();
+						$this->url['params'] = array_combine(array_keys($this->url['params']), $matches);
 					$this->readController($controller);
 					break;
 				} 
     		}
     	}
 
-    	//if($this->url['controller'] != 'Index')  
+    	if(is_null($this->url['controller']))
+		{
+			$expURL = explode('/', $this->url['uri']);
+			if($expURL == '/')
+				$this->url['controller'] = 'Index';
+			else exit('404');
+		}  
 	}	
 
 	public function getURL(string $name = null) 
@@ -52,19 +57,19 @@ class RouterParse extends Router
         if (strpos($route, '{') === false)
         	return trim($route, '/');
 
+        $this->url['params'] = null; // clear befor cycle
+
         return trim(preg_replace_callback('#{(\w+):(\w+)}#', 
               array($this, 'replaceRoute'), $route), '/');
     }
 
     private function replaceRoute($match)
     {
-		//var_dump($match);
-
         $name = $match[1];    
         $pattern = $match[2];
 
         for($i=1; $i<count($match); $i++) {
-        	$this->url['params'][$match[$i]] = null;
+        	$this->args[$match[1]] = null;
         }
 
         $replaced = str_replace($this->routerPattern, $this->routerReplace, $pattern);

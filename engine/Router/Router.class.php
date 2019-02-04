@@ -22,7 +22,7 @@ class Router
 		'GET' => [
 			'/about/{id:nums}/' 	=> 'About@aboutCharact',
 			'/about/' => 'About',
-			'/test\/{id1:nums}\/{id2:nums}\/{id3:nums}/' => 'Test@testCnt'
+			'/test/{id1:nums}/{id2:nums}/{id3:nums}/' => 'Test@testCnt'
 		]
 	];
 
@@ -48,7 +48,6 @@ class Router
 					if(!is_null($parse->getURL('params')))
 						$controller->{$parse->getURL('method')}($parse->getURL('params'));
 					else throw new \Exception('Not enough arguments');
-				else throw new \Exception('Method not found');
 		} else throw new \Exception('Class not found');	
 	}  	
 

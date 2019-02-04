@@ -10,7 +10,7 @@ class Test
 
 	public function testCnt(array $matches) 
 	{
-		echo 'Controller -> Test';
+		echo 'Controller -> Test -> testCnt()';
 		var_dump($matches);
 	}
 }
