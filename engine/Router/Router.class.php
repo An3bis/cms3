@@ -20,9 +20,9 @@ class Router
 
 	protected $routes = [
 		'GET' => [
-			'/' 				=> 'Index',
 			'/about/{id:nums}/' 	=> 'About@aboutCharact',
-			'/about/' => 'About'
+			'/about/' => 'About',
+			'/test\/{id1:nums}\/{id2:nums}\/{id3:nums}/' => 'Test@testCnt'
 		]
 	];
 
@@ -44,7 +44,7 @@ class Router
 			$controller = new $controllerClassName();
 
 			if(!is_null($parse->getURL('method')))
-				if(method_exists($controller, $parse->getURL('method'))) 
+				if(method_exists($controller, $parse->getURL('method')))
 					if(!is_null($parse->getURL('params')))
 						$controller->{$parse->getURL('method')}($parse->getURL('params'));
 					else throw new \Exception('Not enough arguments');

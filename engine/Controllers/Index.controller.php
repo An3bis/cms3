@@ -9,6 +9,6 @@ class Index
 	public function __construct() 
 	{
 		echo 'Controller -> Index -> Construct() <br />';
-		var_dump( Menu::getMenu() );
+		//var_dump( Menu::getMenu() );
 	}
 }

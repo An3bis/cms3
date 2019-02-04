@@ -3,7 +3,7 @@ namespace Engine;
 
 class Controller
 {
-	public function loadController(string $controllerName)
+	public function loadController(string $controllerName='')
 	{
 		if(file_exists($this->getControllerPath($controllerName)))
 			require_once $this->getControllerPath($controllerName);

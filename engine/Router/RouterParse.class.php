@@ -13,53 +13,29 @@ class RouterParse extends Router
     	$this->url['uri'] = trim($this->url['uri'], '/');
     	$expURI = explode('/', $this->url['uri']);
 
-    	// if url == '/' load home
-		if(empty($expURI[0])) 
-			$this->url['controller'] = 'Index';  
-		else { // if not home
+    	$this->url['controller'] = 'Index';
 
-	    	foreach($routes as $routes) {
-	    		foreach($routes as $route => $controller) {
-	    			
-	    			var_dump($this->url['uri']);
-	    			var_dump($this->convertRoute($route));
-	    			var_dump(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri']));
-	    			echo '<br/>';
+    	foreach($routes as $routes) {
+    		foreach($routes as $route => $controller) {
+				if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'], $matches)) {
+					//$this->args
+					//var_dump($matches); die();
+					//var_dump($this->args);
+			
+					$this->readController($controller);
+					break;
+				} 
+    		}
+    	}
 
-					if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'])) {
-						echo 'nice.';
-						break;
-					}
-	    		}
-	    	}
-	    	exit();
-
-/*
-	    		$route = trim($route, '/');
-	    		$expKey = explode('/', $route);	  		
-
-	    		// equal controller in url with routes
-	    		if($this->url['controller'] == RouterHelper::prepareString($expKey[0])) {    			
-					$routMatches = $this->readParams($route);
-
-					if(!empty($routMatches))
-						$this->url['params'] = array_column($routMatches,1);
-					else $this->url['params'] = null;	 
-
-		    		$this->readController($controller); // get controller and his method
-		    		
-		    		break; // stop foreach
-		    	} 
-*/
-
-		}
+    	//if($this->url['controller'] != 'Index')  
 	}	
 
 	public function getURL(string $name = null) 
 	{
 		if(is_null($name)) 
 			return $this->url;
-		else return (isset($this->url[$name])) ? $this->url[$name] : null;
+		else return (isset($this->url[$name])) ? $this->url[$name] : false;
 	}
 
 	private function readController(string $controller) 
@@ -71,30 +47,26 @@ class RouterParse extends Router
 		} else $this->url['controller'] = $controller;		
 	} 
 
-	private function readParams(string $route) : array
-	{
-		if(strpos($route, '{')) { // if we have params
-			$replacePlaceholders = str_replace($this->routerPattern, $this->routerReplace, $route);
-			$replacementPattern = '#^'.$replacePlaceholders.'$#s';
-			preg_match_all($replacementPattern, $this->url['uri'], $routMatches, PREG_SET_ORDER);
-			return $routMatches;
-		}		
-	}	
-
     private function convertRoute($route)
     {
         if (strpos($route, '{') === false)
-        	return $route;
+        	return trim($route, '/');
 
-        return preg_replace_callback('#{(\w+):(\w+)}#', 
-              array($this, 'replaceRoute'), $route);
+        return trim(preg_replace_callback('#{(\w+):(\w+)}#', 
+              array($this, 'replaceRoute'), $route), '/');
     }
 
     private function replaceRoute($match)
     {
-        $name = $match[1];    // id
-        $pattern = $match[2]; // nums
- 
+		//var_dump($match);
+
+        $name = $match[1];    
+        $pattern = $match[2];
+
+        for($i=1; $i<count($match); $i++) {
+        	$this->url['params'][$match[$i]] = null;
+        }
+
         $replaced = str_replace($this->routerPattern, $this->routerReplace, $pattern);
 
         return $replaced;

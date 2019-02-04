@@ -5,12 +5,12 @@ class About
 {
 	public function __construct() 
 	{
-		echo "yeeeep.";
+		echo "About -> __construct() <br />";
 	}
 
 	public function aboutCharact(array $matches) 
 	{
 		echo 'Controller -> About -> aboutCharact() <br />';
-		print_r('Number - '.$matches[0]);
+		var_dump($matches);
 	}
 }
