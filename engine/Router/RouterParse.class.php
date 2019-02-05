@@ -6,7 +6,6 @@ use Engine\Router\RouterHelper;
 class RouterParse extends Router
 {
 	private $url;	
-	private $args = [];
 
 	public function parseURL(array $routes) 
 	{
@@ -18,8 +17,7 @@ class RouterParse extends Router
     		foreach($routes as $route => $controller) {
 				if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'], $matches)) {
 					unset($matches[0]);
-					var_dump($this->args);
-					die();
+					if(!empty($matches))
 						$this->url['params'] = array_combine(array_keys($this->url['params']), $matches);
 					$this->readController($controller);
 					break;
@@ -30,7 +28,7 @@ class RouterParse extends Router
     	if(is_null($this->url['controller']))
 		{
 			$expURL = explode('/', $this->url['uri']);
-			if($expURL == '/')
+			if($expURL[0] == '')
 				$this->url['controller'] = 'Index';
 			else exit('404');
 		}  
@@ -69,7 +67,7 @@ class RouterParse extends Router
         $pattern = $match[2];
 
         for($i=1; $i<count($match); $i++) {
-        	$this->args[$match[1]] = null;
+        	$this->url['params'][$match[1]] = null;
         }
 
         $replaced = str_replace($this->routerPattern, $this->routerReplace, $pattern);
