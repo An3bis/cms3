@@ -1,16 +1,18 @@
 <?php 	
-/**
+/***********************************
+*
 *	Regular Expressions:
 *	{all} - numbers and chars
 *	{nums} - only numbers
 *	{chars} - only symbols
 *
 *	Some description:
-*	@ - calling method. If doesnt exists, params will be in constructor
-**/
+*	name:mask
+*	controller@method
+*
+************************************/
 return $routes = [
 	'GET' => [
-		'/' 				=> 'Index',
-		'/about/{nums}/' 	=> 'About@aboutCharact'
+		'/about/{id:nums}/' 	=> 'About@aboutCharact'
 	]
 ];

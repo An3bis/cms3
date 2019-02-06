@@ -18,7 +18,7 @@ class RouterParse extends Router
 				if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'], $matches)) {
 					unset($matches[0]);
 					if(!empty($matches))
-						$this->url['params'] = array_combine(array_keys($this->url['params']), $matches);
+						$this->url['params'] = array_combine(array_keys($this->url['params']), RouterHelper::prepareArray($matches));
 					$this->readController($controller);
 					break;
 				} 
@@ -50,7 +50,7 @@ class RouterParse extends Router
 		} else $this->url['controller'] = $controller;		
 	} 
 
-    private function convertRoute($route)
+    private function convertRoute(string $route)
     {
         if (strpos($route, '{') === false)
         	return trim($route, '/');
@@ -61,7 +61,7 @@ class RouterParse extends Router
               array($this, 'replaceRoute'), $route), '/');
     }
 
-    private function replaceRoute($match)
+    private function replaceRoute(array $match)
     {
         $name = $match[1];    
         $pattern = $match[2];

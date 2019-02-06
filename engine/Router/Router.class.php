@@ -18,48 +18,17 @@ class Router
         '([a-zA-Z]+)'
     ]; 
 
-	protected $routes = [
-		'GET' => [
-			'/about/{id:nums}/' 	=> 'About@aboutCharact',
-			'/about/' => 'About',
-			'/test/{id1:nums}/{id2:nums}/{id3:nums}/' => 'Test@testCnt'
-		]
-	];
-
-	public function run() 
-	{
-		// parse url
-		$parse = new RouterParse;
-		$parse->parseURL($this->routes);
-
-		// require controller
-		$controller = new Controller;
-		$controller->loadController($parse->getURL('controller'));
-
-		// var controller name
-		$controllerClassName = 'Controller\\'.$parse->getURL('controller');
-
-		// load method
-		if(class_exists($controllerClassName)){
-			$controller = new $controllerClassName();
-
-			if(!is_null($parse->getURL('method')))
-				if(method_exists($controller, $parse->getURL('method')))
-					if(!is_null($parse->getURL('params')))
-						$controller->{$parse->getURL('method')}($parse->getURL('params'));
-					else throw new \Exception('Not enough arguments');
-		} else throw new \Exception('Class not found');	
-	}  	
-
     public function addRule(string $pattern, string $replace)
     {
-    	array_push($this->routerPattern, $this->routeReplace);
+        if(!isset($this->routerPattern[$pattern]) && !isset($routerReplace[$replace]))
+    	   array_push($this->routerPattern, $this->routeReplace);
+        else throw new \Exception('Rule already exists!');
     }
 
     public function addRoute(string $url, string $controller, string $type = 'GET') 
     {
         if($type == 'GET')
-            $this->routes['GET'][$url] = $controller;
-        else $this->routes[$type][$url] = $controller;
+            $routes['GET'][$url] = $controller;
+        else $routes[$type][$url] = $controller;
     }    		
 }
