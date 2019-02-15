@@ -1,14 +1,29 @@
 <?php 
-namespace Engine\Router;
+namespace Engine\RouterParse;
 
-use Engine\Router\RouterHelper;
+use Engine\Router\Router;
+use Engine\Helper;
+use Engine\Request;
 
-class RouterParse extends Router
-{
+/**
+*	Parse URL and Routes
+*/
+class RouterParse extends Router {
+
+	/**
+	*	Keep url params
+	*
+	*	@var $url
+	*/
 	private $url;	
 
-	public function parseURL(array $routes) 
-	{
+	/**
+	*	Fill $url
+	*
+	*	@param array $routes
+	*	@return void
+	*/
+	public function run(array $routes): void {
     	$this->url['uri'] = substr($_SERVER['REQUEST_URI'], 1);
     	$this->url['uri'] = trim($this->url['uri'], '/');
     	$this->url['controller'] = null;
@@ -18,31 +33,40 @@ class RouterParse extends Router
 				if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'], $matches)) {
 					unset($matches[0]);
 					if(!empty($matches))
-						$this->url['params'] = array_combine(array_keys($this->url['params']), RouterHelper::prepareArray($matches));
+						$this->url['params'] = array_combine(array_keys($this->url['params']), Helper::prepareArray($matches));
 					$this->readController($controller);
 					break;
 				} 
     		}
     	}
 
-    	if(is_null($this->url['controller']))
-		{
+    	if(is_null($this->url['controller'])){
 			$expURL = explode('/', $this->url['uri']);
 			if($expURL[0] == '')
 				$this->url['controller'] = 'Index';
-			else exit('404');
+			else Request::code(404);
 		}  
 	}	
 
-	public function getURL(string $name = null) 
-	{
+	/**
+	*	Get class variable
+	*
+	*	@param string $name
+	*	@return ?string
+	*/	
+	public function getURL(string $name = null): ?string {
 		if(is_null($name)) 
 			return $this->url;
-		else return (isset($this->url[$name])) ? $this->url[$name] : false;
+		else return (isset($this->url[$name])) ? $this->url[$name] : null;
 	}
 
-	private function readController(string $controller) 
-	{
+	/**
+	*	Read controller and method from routes
+	*
+	*	@param string $controller
+	*	@return void
+	*/
+	private function readController(string $controller): void {
 		if(strpos($controller, '@')){ // if we have method
 			$expController = explode('@', $controller);
 			$this->url['controller'] = $expController[0];
@@ -50,8 +74,13 @@ class RouterParse extends Router
 		} else $this->url['controller'] = $controller;		
 	} 
 
-    private function convertRoute(string $route)
-    {
+	/**
+	*	Convert routes to normal view
+	*
+	*	@param string $route
+	*	@return string
+	*/
+    private function convertRoute(string $route): string {
         if (strpos($route, '{') === false)
         	return trim($route, '/');
 
@@ -61,14 +90,18 @@ class RouterParse extends Router
               array($this, 'replaceRoute'), $route), '/');
     }
 
-    private function replaceRoute(array $match)
-    {
+	/**
+	*	Replace routes pattern
+	*
+	*	@param array $match
+	*	@return string
+	*/
+    private function replaceRoute(array $match): string {
         $name = $match[1];    
         $pattern = $match[2];
 
-        for($i=1; $i<count($match); $i++) {
+        for($i=1; $i<count($match); $i++)
         	$this->url['params'][$match[1]] = null;
-        }
 
         $replaced = str_replace($this->routerPattern, $this->routerReplace, $pattern);
 

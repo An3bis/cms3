@@ -2,17 +2,25 @@
 namespace Engine; 
 
 use Engine\Router\Router;
-use Engine\Router\RouterHelper;
 use Engine\Router\RouterParse;
 
+/**
+*	Start application
+*/
 class App
 {
-	public function run()
-	{
+
+	/**
+	*	Run application
+	*
+	*	@throws Exception
+	*	@return void
+	*/	
+	public function run(): void {
 		// parse url
 		$parse = new RouterParse;
 		$routes = require_once(ROOT.'engine/Config/routes.config.php');
-		$parse->parseURL($routes);
+		$parse->run($routes);
 
 		// require controller
 		$controller = new Controller;

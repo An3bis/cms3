@@ -1,0 +1,313 @@
+[Fri Feb 15 16:56:07.065264 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP Warning:  include(/var/www/mysite/vendor/composer/../../engine/Router/RouterHelper.class.php): failed to open stream: No such file or directory in /var/www/mysite/vendor/composer/ClassLoader.php on line 444
+[Fri Feb 15 16:56:07.065324 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP Stack trace:
+[Fri Feb 15 16:56:07.065333 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 16:56:07.065340 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 16:56:07.065346 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   3. Engine\\Router\\RouterParse->parseURL() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 16:56:07.065352 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   4. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:21
+[Fri Feb 15 16:56:07.065357 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:21
+[Fri Feb 15 16:56:07.065363 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 16:56:07.065426 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP Warning:  include(): Failed opening '/var/www/mysite/vendor/composer/../../engine/Router/RouterHelper.class.php' for inclusion (include_path='.:/usr/share/php') in /var/www/mysite/vendor/composer/ClassLoader.php on line 444
+[Fri Feb 15 16:56:07.065435 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP Stack trace:
+[Fri Feb 15 16:56:07.065440 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 16:56:07.065446 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 16:56:07.065452 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   3. Engine\\Router\\RouterParse->parseURL() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 16:56:07.065457 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   4. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:21
+[Fri Feb 15 16:56:07.065463 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   5. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:21
+[Fri Feb 15 16:56:07.065469 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP   6. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 16:56:07.065587 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57868] PHP Fatal error:  Uncaught Error: Class 'Engine\\Router\\RouterHelper' not found in /var/www/mysite/engine/Router/RouterParse.class.php:21\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 21
+[Fri Feb 15 16:57:11.555977 2019] [php7:notice] [pid 9508] [client 127.0.0.1:57870] PHP Fatal error:  Uncaught Error: Class 'Engine\\Helper' not found in /var/www/mysite/engine/Router/RouterParse.class.php:21\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 21
+[Fri Feb 15 17:00:08.812977 2019] [php7:notice] [pid 9513] [client 127.0.0.1:57876] PHP Fatal error:  Uncaught Error: Undefined constant 'Engine\\Router' in /var/www/mysite/engine/Router/RouterParse.class.php:2\nStack trace:\n#0 /var/www/mysite/vendor/composer/ClassLoader.php(444): include()\n#1 /var/www/mysite/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/var/www/mysite...')\n#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Engine\\\\Router\\\\R...')\n#3 /var/www/mysite/engine/App.class.php(13): spl_autoload_call('Engine\\\\Router\\\\R...')\n#4 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#5 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 2
+[Fri Feb 15 17:00:08.858900 2019] [php7:notice] [pid 9513] [client 127.0.0.1:57876] PHP Fatal error:  Uncaught Error: Undefined constant 'Engine\\Router' in /var/www/mysite/engine/Router/RouterParse.class.php:2\nStack trace:\n#0 /var/www/mysite/vendor/composer/ClassLoader.php(444): include()\n#1 /var/www/mysite/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/var/www/mysite...')\n#2 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Engine\\\\Router\\\\R...')\n#3 /var/www/mysite/engine/App.class.php(13): spl_autoload_call('Engine\\\\Router\\\\R...')\n#4 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#5 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 2
+[Fri Feb 15 17:00:25.309058 2019] [php7:notice] [pid 9506] [client 127.0.0.1:57878] PHP Fatal error:  Uncaught Error: Class 'Engine\\Helper' not found in /var/www/mysite/engine/Router/RouterParse.class.php:21\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 21
+[Fri Feb 15 17:00:32.075844 2019] [php7:notice] [pid 9507] [client 127.0.0.1:57880] PHP Fatal error:  Uncaught Error: Class 'Engine\\Helper' not found in /var/www/mysite/engine/Router/RouterParse.class.php:21\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 21
+[Fri Feb 15 17:02:28.707694 2019] [php7:notice] [pid 9509] [client 127.0.0.1:57906] PHP Fatal error:  Uncaught Error: Class 'Engine\\Helper' not found in /var/www/mysite/engine/Router/RouterParse.class.php:21\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 21
+[Fri Feb 15 17:02:54.442431 2019] [php7:notice] [pid 9510] [client 127.0.0.1:57908] PHP Fatal error:  Uncaught Error: Class 'Engine\\Helper' not found in /var/www/mysite/engine/Router/RouterParse.class.php:21\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 21
+[Fri Feb 15 17:15:15.695556 2019] [php7:notice] [pid 9507] [client 127.0.0.1:57932] PHP Fatal error:  Uncaught Error: Class 'Engine\\Request' not found in /var/www/mysite/engine/Router/RouterParse.class.php:34\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(15): Engine\\Router\\RouterParse->parseURL(Array)\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 34
+[Fri Feb 15 17:19:37.043132 2019] [php7:notice] [pid 9508] [client 127.0.0.1:57962] PHP Fatal error:  Uncaught Error: Call to undefined method Engine\\Router\\RouterParse::parseURL() in /var/www/mysite/engine/App.class.php:15\nStack trace:\n#0 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#1 {main}\n  thrown in /var/www/mysite/engine/App.class.php on line 15
+[Fri Feb 15 17:31:51.515005 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58006] PHP Fatal error:  Uncaught TypeError: Return value of Engine\\Router\\RouterParse::replaceRoute() must be of the type array, string returned in /var/www/mysite/engine/Router/RouterParse.class.php:106\nStack trace:\n#0 [internal function]: Engine\\Router\\RouterParse->replaceRoute(Array)\n#1 /var/www/mysite/engine/Router/RouterParse.class.php(88): preg_replace_callback('#{(\\\\w+):(\\\\w+)}#', Array, '/about/{id:nums...')\n#2 /var/www/mysite/engine/Router/RouterParse.class.php(31): Engine\\Router\\RouterParse->convertRoute('/about/{id:nums...')\n#3 /var/www/mysite/engine/App.class.php(17): Engine\\Router\\RouterParse->run(Array)\n#4 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#5 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 106
+[Fri Feb 15 17:32:07.233610 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58008] PHP Fatal error:  Uncaught TypeError: Return value of Engine\\Router\\RouterParse::getURL() must be an instance of Engine\\Router\\mixed, string returned in /var/www/mysite/engine/Router/RouterParse.class.php:58\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(21): Engine\\Router\\RouterParse->getURL('controller')\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 58
+[Fri Feb 15 17:38:04.468834 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58278] PHP Fatal error:  Uncaught TypeError: Return value of Engine\\Router\\RouterParse::getURL() must be of the type array or null, string returned in /var/www/mysite/engine/Router/RouterParse.class.php:58\nStack trace:\n#0 /var/www/mysite/engine/App.class.php(21): Engine\\Router\\RouterParse->getURL('controller')\n#1 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#2 {main}\n  thrown in /var/www/mysite/engine/Router/RouterParse.class.php on line 58
+[Fri Feb 15 17:39:24.819692 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 9
+[Fri Feb 15 17:39:24.819746 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP Stack trace:
+[Fri Feb 15 17:39:24.819763 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:39:24.819776 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:39:24.819787 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:39:24.819799 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:39:24.819810 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:39:24.819820 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:39:24.819838 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:39:24.819844 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:39:24.819850 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:39:24.819856 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58284] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:39:42.662861 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP Fatal error:  Cannot declare class Engine\\Router\\Router because the name is already in use in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 17:39:42.662891 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP Stack trace:
+[Fri Feb 15 17:39:42.662899 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:39:42.662918 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:39:42.662924 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:39:42.662930 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:39:42.662936 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:39:42.662942 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:39:42.662947 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:39:42.662953 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:39:42.662958 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58286] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:13.985231 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP Fatal error:  Class 'Engine\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 17:40:13.985377 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP Stack trace:
+[Fri Feb 15 17:40:13.985392 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:40:13.985402 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:40:13.985411 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:40:13.985429 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:40:13.985437 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:13.985446 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:40:13.985454 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:40:13.985463 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:40:13.985472 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:13.985480 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58288] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:40:28.738744 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP Fatal error:  Class 'Engine\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 17:40:28.738895 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP Stack trace:
+[Fri Feb 15 17:40:28.738943 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:40:28.738987 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:40:28.739029 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:40:28.739071 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:40:28.739127 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:28.739168 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:40:28.739209 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:40:28.739250 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:40:28.739291 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:28.739306 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58304] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:40:41.917247 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 17:40:41.917379 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP Stack trace:
+[Fri Feb 15 17:40:41.917415 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:40:41.917448 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:40:41.917479 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:40:41.917511 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:40:41.917542 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:41.917573 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:40:41.917603 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:40:41.917634 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:40:41.917665 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:40:41.917696 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58306] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:48:19.514771 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 17:48:19.514807 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP Stack trace:
+[Fri Feb 15 17:48:19.514816 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:19.514823 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:19.514830 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:48:19.514836 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:48:19.514843 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:48:19.514859 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:48:19.514865 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:48:19.514872 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:10
+[Fri Feb 15 17:48:19.514878 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:48:19.514883 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58480] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:48:37.862048 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.862095 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.862117 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.862129 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.862140 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.862158 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.862167 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862177 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862256 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.862269 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.862279 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.862288 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.862298 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.862308 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.862317 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862327 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862498 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.862515 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.862526 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.862558 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.862568 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.862577 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.862585 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862595 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862668 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.862679 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.862689 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.862698 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.862714 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.862723 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.862732 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.862741 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863080 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.863097 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.863106 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.863115 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.863124 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.863133 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.863142 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863150 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863220 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.863232 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.863241 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.863249 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.863270 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.863280 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.863289 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863297 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863369 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.863382 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.863391 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.863400 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.863409 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.863418 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.863426 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863435 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863494 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 104
+[Fri Feb 15 17:48:37.863505 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP Stack trace:
+[Fri Feb 15 17:48:37.863514 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:48:37.863522 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:48:37.863531 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:48:37.863540 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:31
+[Fri Feb 15 17:48:37.863548 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:48:37.863557 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58484] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:88
+[Fri Feb 15 17:49:59.326454 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.326491 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.326500 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.326508 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.326514 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.326530 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.326537 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326543 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326598 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.326603 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.326609 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.326615 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.326621 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.326626 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.326632 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326637 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326749 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.326759 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.326765 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.326771 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.326776 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.326782 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.326788 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326793 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326834 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.326896 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.326909 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.326916 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.326923 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.326936 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.326942 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.326948 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327156 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.327165 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.327171 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.327177 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.327182 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.327188 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.327193 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327199 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327242 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.327249 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.327254 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.327260 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.327265 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.327271 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.327276 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327282 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327328 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerPattern in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.327335 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.327341 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.327346 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.327351 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.327357 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.327367 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327373 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327411 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Notice:  Undefined property: Engine\\Router\\RouterParse::$routerReplace in /var/www/mysite/engine/Router/RouterParse.class.php on line 105
+[Fri Feb 15 17:49:59.327418 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP Stack trace:
+[Fri Feb 15 17:49:59.327423 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:49:59.327428 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:49:59.327434 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   3. Engine\\Router\\RouterParse->run() /var/www/mysite/engine/App.class.php:17
+[Fri Feb 15 17:49:59.327439 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   4. Engine\\Router\\RouterParse->convertRoute() /var/www/mysite/engine/Router/RouterParse.class.php:32
+[Fri Feb 15 17:49:59.327444 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   5. preg_replace_callback() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:49:59.327450 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58488] PHP   6. Engine\\Router\\RouterParse->replaceRoute() /var/www/mysite/engine/Router/RouterParse.class.php:89
+[Fri Feb 15 17:50:51.314686 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP Fatal error:  Class 'Engine\\Router' not found in /var/www/mysite/engine/Router/RouterParse.class.php on line 11
+[Fri Feb 15 17:50:51.314732 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP Stack trace:
+[Fri Feb 15 17:50:51.314743 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:50:51.314751 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:50:51.314759 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:50:51.314766 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:50:51.314774 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:50:51.314780 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58490] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:51:01.668070 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 17:51:01.668099 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP Stack trace:
+[Fri Feb 15 17:51:01.668109 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 17:51:01.668116 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 17:51:01.668122 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:51:01.668129 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:15
+[Fri Feb 15 17:51:01.668135 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:51:01.668151 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 17:51:01.668157 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 17:51:01.668164 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 17:51:01.668169 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 17:51:01.668175 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58492] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:03:27.300257 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 18:03:27.300306 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP Stack trace:
+[Fri Feb 15 18:03:27.300318 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 18:03:27.300327 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 18:03:27.300334 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:03:27.300342 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:03:27.300350 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:03:27.300366 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:03:27.300373 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:03:27.300380 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:03:27.300387 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:03:27.300414 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58506] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:03:52.454021 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 18:03:52.454052 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP Stack trace:
+[Fri Feb 15 18:03:52.454061 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 18:03:52.454068 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 18:03:52.454075 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:03:52.454081 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:03:52.454087 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:03:52.454093 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:03:52.454114 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:03:52.454121 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:03:52.454127 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:03:52.454133 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58510] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:05:13.733075 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 18:05:13.733120 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP Stack trace:
+[Fri Feb 15 18:05:13.733131 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 18:05:13.733139 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 18:05:13.733146 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:05:13.733153 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:05:13.733159 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:05:13.733166 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:05:13.733172 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:05:13.733179 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:05:13.733185 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:05:13.733191 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58522] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:05:44.397063 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 18:05:44.397101 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP Stack trace:
+[Fri Feb 15 18:05:44.397111 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 18:05:44.397118 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 18:05:44.397124 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:05:44.397131 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:05:44.397137 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:05:44.397143 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:05:44.397149 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:05:44.397167 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:05:44.397174 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:05:44.397179 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58524] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:06:11.338300 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP Fatal error:  Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/Router/Router.class.php on line 10
+[Fri Feb 15 18:06:11.338344 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP Stack trace:
+[Fri Feb 15 18:06:11.338355 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   1. {main}() /var/www/mysite/public/index.php:0
+[Fri Feb 15 18:06:11.338364 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   2. Engine\\App->run() /var/www/mysite/public/index.php:9
+[Fri Feb 15 18:06:11.338372 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   3. spl_autoload_call() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:06:11.338379 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   4. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/App.class.php:22
+[Fri Feb 15 18:06:11.338387 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   5. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:06:11.338404 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   6. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:06:11.338410 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   7. spl_autoload_call() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:06:11.338418 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   8. Composer\\Autoload\\ClassLoader->loadClass() /var/www/mysite/engine/Router/RouterParse.class.php:11
+[Fri Feb 15 18:06:11.338424 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP   9. Composer\\Autoload\\includeFile() /var/www/mysite/vendor/composer/ClassLoader.php:322
+[Fri Feb 15 18:06:11.338431 2019] [php7:notice] [pid 9506] [client 127.0.0.1:58526] PHP  10. include() /var/www/mysite/vendor/composer/ClassLoader.php:444
+[Fri Feb 15 18:06:20.836328 2019] [php7:notice] [pid 9507] [client 127.0.0.1:58532] PHP Fatal error:  Uncaught Error: Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/App.class.php:22\nStack trace:\n#0 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#1 {main}\n  thrown in /var/www/mysite/engine/App.class.php on line 22
+[Fri Feb 15 18:06:40.242307 2019] [php7:notice] [pid 9509] [client 127.0.0.1:58534] PHP Fatal error:  Uncaught Error: Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/App.class.php:21\nStack trace:\n#0 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#1 {main}\n  thrown in /var/www/mysite/engine/App.class.php on line 21
+[Fri Feb 15 18:07:26.034935 2019] [php7:notice] [pid 9510] [client 127.0.0.1:58538] PHP Fatal error:  Uncaught Error: Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/App.class.php:21\nStack trace:\n#0 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#1 {main}\n  thrown in /var/www/mysite/engine/App.class.php on line 21
+[Fri Feb 15 18:07:46.967841 2019] [php7:notice] [pid 9508] [client 127.0.0.1:58540] PHP Fatal error:  Uncaught Error: Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/App.class.php:21\nStack trace:\n#0 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#1 {main}\n  thrown in /var/www/mysite/engine/App.class.php on line 21
+[Fri Feb 15 18:11:15.738681 2019] [php7:notice] [pid 9513] [client 127.0.0.1:58606] PHP Fatal error:  Uncaught Error: Class 'Engine\\Router\\RouterParse' not found in /var/www/mysite/engine/App.class.php:21\nStack trace:\n#0 /var/www/mysite/public/index.php(9): Engine\\App->run()\n#1 {main}\n  thrown in /var/www/mysite/engine/App.class.php on line 21

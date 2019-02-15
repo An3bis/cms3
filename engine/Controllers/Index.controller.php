@@ -4,7 +4,7 @@ namespace Controller;
 use Engine\DB;
 use Engine\Models\Menu;
 
-class Index 
+class Index // add extends
 {
 	public function __construct() 
 	{
