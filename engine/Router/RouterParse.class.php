@@ -1,5 +1,5 @@
 <?php 
-namespace Engine\RouterParse;
+namespace Engine\Router;
 
 use Engine\Router\Router;
 use Engine\Helper;
@@ -18,12 +18,13 @@ class RouterParse extends Router {
 	private $url;	
 
 	/**
-	*	Fill $url
+	*	Parse url and fill $url
 	*
-	*	@param array $routes
 	*	@return void
 	*/
-	public function run(array $routes): void {
+	public function parseUrl(): void {
+		$routes = require_once(ROOT.'engine/Config/routes.config.php');
+
     	$this->url['uri'] = substr($_SERVER['REQUEST_URI'], 1);
     	$this->url['uri'] = trim($this->url['uri'], '/');
     	$this->url['controller'] = null;
@@ -54,7 +55,7 @@ class RouterParse extends Router {
 	*	@param string $name
 	*	@return ?string
 	*/	
-	public function getURL(string $name = null): ?string {
+	public function getURL(string $name = null) {
 		if(is_null($name)) 
 			return $this->url;
 		else return (isset($this->url[$name])) ? $this->url[$name] : null;

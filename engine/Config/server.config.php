@@ -1,2 +1,4 @@
 <?php 
-// main defines
+return $serverconfig = [
+
+];

@@ -1,13 +1,12 @@
 <?php 
 namespace Engine\Router;
 
-use Engine\Router\RouterParse;
 use Engine\Controller;
 
 /**
 * Main router
 */
-class Router extends RouterParse
+class Router 
 {
     /**
     *   Patterns for router
