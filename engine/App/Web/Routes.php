@@ -1,13 +1,13 @@
 <?php 	
 /***********************************
 *
-*	Regular Expressions:
+*	Named masks:
 *	{all} - numbers and chars
 *	{nums} - only numbers
 *	{chars} - only symbols
 *
 *	Some description:
-*	name:mask
+*	{name:mask}
 *	controller@method
 *
 ************************************/

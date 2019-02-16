@@ -13,6 +13,11 @@ class Container {
 	private static $container = [];
 
 	/**
+	*	Closed contructor
+	*/
+	private function __construct() {}
+
+	/**
 	*	Add new object to container
 	*
 	*	@param string $name

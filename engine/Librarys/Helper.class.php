@@ -13,8 +13,6 @@ class Helper {
 	*	@return array
 	*/	
 	public static function prepareArray(array $arr): array {
-		$tmp = [];
-
 		foreach($arr as $key)
 			$tmp[] = self::prepareString($key);
 
