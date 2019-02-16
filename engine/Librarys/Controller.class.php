@@ -1,7 +1,21 @@
 <?php 
 namespace Engine;
 
-class Controller{
+class Controller {
+
+	/**
+	*	RouterHelper
+	*
+	*	@var object RouterHelper
+	*/	
+	private $router;
+
+	/**
+	*	Constructor
+	*/
+	public function __construct() {
+		$this->router = Container::get('Router');
+	}
 
 	/**
 	*	Load controller and action
@@ -10,20 +24,16 @@ class Controller{
 	*	@return void
 	*/	
 	public function loadController(): void {
-		$parse = Container::get('Router');
-		$this->includeController($parse->getURL('controller'));
+		$this->includeController($this->router->getURL('controller'));
+		$controllerName = 'Controller\\'.$this->router->getURL('controller');
 
-		// var controller name
-		$controllerClassName = 'Controller\\'.$parse->getURL('controller');
+		if(class_exists($controllerName)){
+			$controller = new $controllerName();
 
-		// load controller
-		if(class_exists($controllerClassName)){
-			$controller = new $controllerClassName();
-
-			if(!is_null($parse->getURL('method')))
-				if(method_exists($controller, $parse->getURL('method')))
-					if(!is_null($parse->getURL('params')))
-						$controller->{$parse->getURL('method')}($parse->getURL('params'));
+			if(!is_null($this->router->getURL('method')))
+				if(method_exists($controller, $this->router->getURL('method')))
+					if(!is_null($this->router->getURL('params')))
+						$controller->{$this->router->getURL('method')}($this->router->getURL('params'));
 					else throw new \Exception('Not enough arguments');
 		} else throw new \Exception('Class not found');			
 	}
@@ -49,6 +59,6 @@ class Controller{
 	*	@return string
 	*/	
 	private function getControllerPath(string $controller): string {
-		return ROOT.'engine/Controllers/'.$controller.'.controller.php';
+		return ROOT.'engine/App/Http/Controllers/'.$controller.'.controller.php';
 	}	
 }

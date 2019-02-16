@@ -13,9 +13,23 @@ class RouterParse extends Router {
 	/**
 	*	Keep url params
 	*
-	*	@var $url
+	*	@var array $url
 	*/
 	private $url;	
+
+	/**
+	*	Routes
+	*
+	*	@var array $routes
+	*/
+	private $routes;
+
+	/**
+	*	Constructor
+	*/
+	public function __construct() {
+		$this->routes = require_once(ROOT.'engine/App/Web/Routes.php');
+	}
 
 	/**
 	*	Parse url and fill $url
@@ -23,13 +37,42 @@ class RouterParse extends Router {
 	*	@return void
 	*/
 	public function parseUrl(): void {
-		$routes = require_once(ROOT.'engine/Config/routes.config.php');
+		$this->readUri();
+    	$this->readParams();
+    	$this->checkIndex();  
+	}	
 
+	/**
+	*	Check index controller 
+	*
+	*	@return void
+	*/
+	private function checkIndex(): void {
+		if(is_null($this->url['controller'])){
+			$expURL = explode('/', $this->url['uri']);
+			if($expURL[0] == '')
+				$this->url['controller'] = 'Index';
+			else Request::code(404);
+		}		
+	}
+
+	/**
+	*	Parse uri
+	*
+	*	@return void
+	*/
+	private function readUri(): void {
     	$this->url['uri'] = substr($_SERVER['REQUEST_URI'], 1);
-    	$this->url['uri'] = trim($this->url['uri'], '/');
-    	$this->url['controller'] = null;
+    	$this->url['uri'] = trim($this->url['uri'], '/');		
+	}
 
-    	foreach($routes as $routes) {
+	/**
+	*	Read params from route
+	*
+	*	@return array
+	*/
+	private function readParams() {
+    	foreach($this->routes as $routes) {
     		foreach($routes as $route => $controller) {
 				if(preg_match('#'.$this->convertRoute($route).'#', $this->url['uri'], $matches)) {
 					unset($matches[0]);
@@ -39,15 +82,8 @@ class RouterParse extends Router {
 					break;
 				} 
     		}
-    	}
-
-    	if(is_null($this->url['controller'])){
-			$expURL = explode('/', $this->url['uri']);
-			if($expURL[0] == '')
-				$this->url['controller'] = 'Index';
-			else Request::code(404);
-		}  
-	}	
+    	}		
+	}
 
 	/**
 	*	Get class variable
@@ -84,9 +120,7 @@ class RouterParse extends Router {
     private function convertRoute(string $route): string {
         if (strpos($route, '{') === false)
         	return trim($route, '/');
-
         $this->url['params'] = null; // clear befor cycle
-
         return trim(preg_replace_callback('#{(\w+):(\w+)}#', 
               array($this, 'replaceRoute'), $route), '/');
     }
@@ -100,12 +134,9 @@ class RouterParse extends Router {
     private function replaceRoute(array $match): string {
         $name = $match[1];    
         $pattern = $match[2];
-
         for($i=1; $i<count($match); $i++)
         	$this->url['params'][$match[1]] = null;
-
         $replaced = str_replace($this->routerPattern, $this->routerReplace, $pattern);
-
         return $replaced;
     }    		
 }
