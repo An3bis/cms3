@@ -1,7 +1,8 @@
 <?php 
 namespace Engine;
 
-class Controller {
+class Controller 
+{
 
 	/**
 	*	RouterHelper
@@ -13,7 +14,8 @@ class Controller {
 	/**
 	*	Constructor
 	*/
-	public function __construct() {
+	public function __construct() 
+	{
 		$this->router = Container::get('Router');
 	}
 
@@ -23,7 +25,8 @@ class Controller {
 	*	@throws Exception
 	*	@return void
 	*/	
-	public function loadController(): void {
+	public function loadController(): void 
+	{
 		$this->includeController($this->router->getURL('controller'));
 		$controllerName = 'Controller\\'.$this->router->getURL('controller');
 
@@ -45,7 +48,8 @@ class Controller {
 	*	@throws Exception
 	*	@return void
 	*/	
-	private function includeController(string $controller): void {
+	private function includeController(string $controller): void 
+	{
 		if(file_exists($this->getControllerPath($controller)))
 			require_once $this->getControllerPath($controller);
 		else throw new \Exception('File doesnt exists');		
@@ -58,7 +62,8 @@ class Controller {
 	*	@throws Exception
 	*	@return string
 	*/	
-	private function getControllerPath(string $controller): string {
+	private function getControllerPath(string $controller): string 
+	{
 		return ROOT.'engine/App/Http/Controllers/'.$controller.'.controller.php';
 	}	
 }

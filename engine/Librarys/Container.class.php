@@ -25,7 +25,8 @@ class Container {
 	*	@throws Exception
 	*	@return void
 	*/
-	public static function add(string $name, object $obj): void {
+	public static function add(string $name, object $obj): void 
+	{
 		if(!isset(self::$container[$name]))
 			self::$container[$name] = $obj;
 		else throw new \Exception('This key already exists.');	
@@ -39,7 +40,8 @@ class Container {
 	*	@throws Exception
 	*	@return ?object	
 	*/
-	public static function get(string $name): ?object {
+	public static function get(string $name): ?object 
+	{
 		if(isset(self::$container[$name]))
 			return self::$container[$name];
 		else throw new \Exception('This key didnt exists.');	

@@ -1,0 +1,3 @@
+<?php 
+define("SiteName", "OnSet");
+?>
