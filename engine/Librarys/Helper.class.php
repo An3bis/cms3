@@ -12,7 +12,8 @@ class Helper {
 	*	@param array $arr
 	*	@return array
 	*/	
-	public static function prepareArray(array $arr): array {
+	public static function prepareArray(array $arr): array 
+	{
 		foreach($arr as $key)
 			$tmp[] = self::prepareString($key);
 
@@ -25,7 +26,8 @@ class Helper {
 	*	@param string $arr
 	*	@return string
 	*/
- 	public static function prepareString(string $string): string {
+	 public static function prepareString(string $string): string 
+	 {
 		return htmlentities($string);
 	}	
 }

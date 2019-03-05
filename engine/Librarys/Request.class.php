@@ -4,7 +4,8 @@ namespace Engine;
 /**
 *	Server request class
 */
-class Request {
+class Request 
+{
 
 	/**
 	*	Send response code
@@ -13,7 +14,8 @@ class Request {
 	*	@return void
 	*	@todo add view
 	*/
-	public static function code(int $code): void {
+	public static function code(int $code): void 
+	{
 		http_response_code($code);
 		// replace view
 		echo $code;
@@ -26,7 +28,8 @@ class Request {
 	*	@param $url redirect URL
 	*	@return void
 	*/
-	public static function redirect(string $url): void {
+	public static function redirect(string $url): void 
+	{
 		header('Location: '.$url);
 	}
 }

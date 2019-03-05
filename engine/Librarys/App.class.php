@@ -15,7 +15,8 @@ class App
 	*	@throws Exception
 	*	@return void
 	*/	
-	public function run(): void {
+	public function run(): void
+	{
 		Container::add('Router', (new RouterParse));
 		Container::get('Router')->parseUrl();
 

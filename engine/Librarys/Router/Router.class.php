@@ -37,8 +37,9 @@ class Router
     *   @param string $replace
     *   @return void
     */
-    public function addRule(string $pattern, string $replace): void {
-        if(!isset($this->routerPattern[$pattern]) && !isset($routerReplace[$replace]))
+    public function addRule(string $pattern, string $replace): void 
+    {
+        if(!isset($this->routerPattern[$pattern]) && !isset($this->routerReplace[$replace]))
     	   array_push($this->routerPattern, $this->routeReplace);
         else throw new \Exception('Rule already exists!');
     }
@@ -51,7 +52,8 @@ class Router
     *   @param string $type
     *   @return void
     */
-    public function addRoute(string $url, string $controller, string $type = 'GET'): void {
+    public function addRoute(string $url, string $controller, string $type = 'GET'): void 
+    {
         if($type == 'GET')
             $routes['GET'][$url] = $controller;
         else $routes[$type][$url] = $controller;

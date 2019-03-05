@@ -3,14 +3,8 @@ namespace Controller;
 
 class About 
 {
-	public function __construct() 
+	public function about(array $matches) 
 	{
-		echo "About -> __construct() <br />";
-	}
-
-	public function aboutCharact(array $matches) 
-	{
-		echo 'Controller -> About -> aboutCharact() <br />';
-		var_dump($matches);
+		
 	}
 }

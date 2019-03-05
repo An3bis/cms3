@@ -4,6 +4,7 @@ namespace Engine;
 /**
 *	Setp-up framework
 */
-class Config {
+class Config 
+{
 	
 }
