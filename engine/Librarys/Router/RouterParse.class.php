@@ -86,7 +86,7 @@ class RouterParse extends Router
 						$this->url['params'] = array_combine(array_keys($this->url['params']), Helper::prepareArray($matches));
 					$this->readController($controller);
 					break;
-				} 
+				} ;
     		}
     	}		
 	}
@@ -127,8 +127,10 @@ class RouterParse extends Router
 	*/
 	private function convertRoute(string $route): string 
 	{
-        if (strpos($route, '{') === false)
-        	return trim($route, '/');
+        if (strpos($route, '{') === false) {
+			$this->url['params'] = null;
+			return trim($route, '/');
+		}
         $this->url['params'] = null; // clear befor cycle
         return trim(preg_replace_callback('#{(\w+):(\w+)}#', 
               array($this, 'replaceRoute'), $route), '/');

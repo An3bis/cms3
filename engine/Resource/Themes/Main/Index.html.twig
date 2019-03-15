@@ -2,7 +2,48 @@
 <html>
 	<head>
 		<title>{{ SiteName }}</title>
-		{{ asset('css/main.css') }}
+
+		<style>
+		@import url("https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans");
+
+		h1 {
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 64px;
+			margin: 0px;
+		}
+
+		li {
+			font-family: 'Open Sans', sans-serif;
+			list-style-type: none;
+			display:inline;
+			font-size: 24px;
+			padding: 5px;
+		}
+
+		ul {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #808080;
+		}
+
+		a:hover {
+			color: #00091a;
+		}
+
+		#red {
+			color: #c63939;
+		}
+
+		.block {
+			padding: 20% 0;
+			text-align: center;
+		}
+		</style>
+
 	</head>
 
 	<body>
@@ -11,7 +52,7 @@
 
 			<ul>
 				<li><a href="#">Main</a></li>
-				<li><a href="#">About</a></li>
+				<li><a href="{{ About }}">About</a></li>
 				<li><a href="#">Docs</a></li>
 			</ul>
 		</div>	

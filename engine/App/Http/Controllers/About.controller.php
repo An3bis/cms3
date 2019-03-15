@@ -1,10 +1,10 @@
 <?php 
 namespace Controller;
 
-class About 
+class About extends \Engine\Controller
 {
-	public function about(array $matches) 
+	public function __construct()
 	{
-		
+		echo 'About page';
 	}
 }

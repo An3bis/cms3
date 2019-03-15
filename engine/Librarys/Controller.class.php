@@ -1,6 +1,9 @@
 <?php 
 namespace Engine;
 
+/**
+ * Controller class
+ */
 class Controller 
 {
 
@@ -33,11 +36,8 @@ class Controller
 		if(class_exists($controllerName)){
 			$controller = new $controllerName();
 
-			if(!is_null($this->router->getURL('method')))
-				if(method_exists($controller, $this->router->getURL('method')))
-					if(!is_null($this->router->getURL('params')))
-						$controller->{$this->router->getURL('method')}($this->router->getURL('params'));
-					else throw new \Exception('Not enough arguments');
+			if(!is_null($this->router->getURL('method')) && method_exists($controller, $this->router->getURL('method')))
+				$controller->{$this->router->getURL('method')}($this->router->getURL('params'));
 		} else throw new \Exception('Class not found');			
 	}
 
@@ -48,7 +48,7 @@ class Controller
 	*	@throws Exception
 	*	@return void
 	*/	
-	private function includeController(string $controller): void 
+	protected function includeController(string $controller): void 
 	{
 		if(file_exists($this->getControllerPath($controller)))
 			require_once $this->getControllerPath($controller);
@@ -62,7 +62,7 @@ class Controller
 	*	@throws Exception
 	*	@return string
 	*/	
-	private function getControllerPath(string $controller): string 
+	protected function getControllerPath(string $controller): string 
 	{
 		return ROOT.'engine/App/Http/Controllers/'.$controller.'.controller.php';
 	}	
