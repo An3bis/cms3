@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>{{ SiteName }}</title>
+		<title>{{ sitename }}</title>
 
 		<style>
 		@import url("https://fonts.googleapis.com/css?family=Ubuntu|Open+Sans");
@@ -51,10 +51,11 @@
 			<h1><span id="red">On</span>seT</h1>
 
 			<ul>
-				<li><a href="#">Main</a></li>
-				<li><a href="{{ About }}">About</a></li>
-				<li><a href="#">Docs</a></li>
+			{% for key,value in menu %}
+				<li><a href="{{ value }}">{{ key }}</a></li>
+			{% endfor %}	
 			</ul>
+
 		</div>	
 	</body>
 </html>

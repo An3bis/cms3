@@ -13,8 +13,9 @@
 ************************************/
 return $routes = [
 	'GET' => [
-		//'/' => 'Index',
-		'/about/' => 'About',
-		'/about/{id:nums}/' => 'About@test',	
+		'/about/' 					=> 'About',
+		'/store/product-{id:nums}/' => 'Store@getProduct',		
+		'/store/' 					=> 'Store@getProducts',
+		'/basket/' 					=> 'Basket@getProducts',
 	]
 ];

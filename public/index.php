@@ -20,5 +20,5 @@ try {
 	echo "<strong>File:</strong> {$e->getFile()} <br>";
 	echo "<strong>Line:</strong> {$e->getLine()} <br>";
 	echo "<strong>Message:</strong> {$e->getMessage()}";
-	exit();
+	die();
 }
