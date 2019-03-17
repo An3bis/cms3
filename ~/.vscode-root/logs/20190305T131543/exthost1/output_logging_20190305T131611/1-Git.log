@@ -1,0 +1,106 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /var/www/mysite
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :engine/Librarys/App.class.php
+> git show :engine/Librarys/Config.class.php
+> git show :engine/Librarys/Container.class.php
+> git show :engine/Librarys/Controller.class.php
+> git show :engine/Librarys/DB.class.php
+> git show :engine/Librarys/Helper.class.php
+> git show :engine/Librarys/Request.class.php
+> git show :engine/Librarys/View.class.php
+> git check-ignore -z --stdin
+> git show :engine/Librarys/Router/Router.class.php
+> git show :engine/Librarys/Router/RouterParse.class.php
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :engine/App/Web/Routes.php
+> git check-ignore -z --stdin
+> git show :engine/App/Http/Controllers/Index.controller.php
+> git check-ignore -z --stdin
+> git show :engine/Librarys/View.class.php
+> git show :engine/Librarys/Request.class.php
+> git show :engine/Librarys/Controller.class.php
+> git show :engine/Librarys/Container.class.php
+> git show :engine/Librarys/DB.class.php
+> git show :engine/Librarys/Helper.class.php
+> git show :engine/Librarys/Request.class.php
+> git show :engine/Librarys/View.class.php
+> git show :engine/Librarys/Config.class.php
+> git show :engine/Librarys/App.class.php
+> git show :engine/Librarys/Router/RouterParse.class.php
+> git show :engine/Librarys/Router/Router.class.php
+> git show :engine/Librarys/Router/RouterParse.class.php
+> git show :engine/Librarys/View.class.php
+> git show :engine/Logs/Apache/access.log
+> git show :engine/Logs/Apache/error.log
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :engine/Librarys/View.class.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :public/index.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :engine/Resource/Themes/Main/Index.html.twig
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :engine/Logs/Apache/error.log
+> git show :engine/Resource/Themes/Main/Index.html.twig
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/cms/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose

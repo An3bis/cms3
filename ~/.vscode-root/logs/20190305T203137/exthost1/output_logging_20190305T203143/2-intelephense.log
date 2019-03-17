@@ -1,0 +1,58 @@
+[Info  - 8:31:48 PM] Initialising
+[Info  - 8:31:48 PM] Reading state from /var/www/mysite/~/.vscode-root/User/workspaceStorage/6e2f04a94750f30720732d7bde6dad93/bmewburn.vscode-intelephense-client/202bafbe.
+[Info  - 8:31:49 PM] Initialised in 708 ms
+[Info  - 8:31:49 PM] Intelephense 1.0.7
+[Info  - 8:31:49 PM] Indexing started.
+[Info  - 8:31:57 PM] Indexing ended. 1081 files indexed in 8s.
+[Info  - 8:31:57 PM] Writing state to /var/www/mysite/~/.vscode-root/User/workspaceStorage/6e2f04a94750f30720732d7bde6dad93/bmewburn.vscode-intelephense-client/202bafbe.
+[Info  - 8:31:58 PM] Wrote state in 0.7s.
+[Info  - 8:38:43 PM] Indexing started.
+[Info  - 8:38:44 PM] Indexing ended. 8 files indexed in 0s.
+[Info  - 8:55:09 PM] Indexing started.
+[Info  - 8:55:09 PM] Indexing ended. 24 files indexed in 0s.
+[Info  - 8:55:13 PM] Indexing started.
+[Info  - 8:55:13 PM] Indexing ended. 8 files indexed in 0s.
+[Info  - 8:55:51 PM] Indexing started.
+[Info  - 8:55:52 PM] Indexing ended. 8 files indexed in 0s.
+[Info  - 3:50:40 PM] Indexing started.
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/AppVariable.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Command/DebugCommand.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Command/LintCommand.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/DataCollector/TwigDataCollector.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/AssetExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/CodeExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/CsrfExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/CsrfRuntime.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/DumpExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/ExpressionExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/FormExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/HttpFoundationExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/HttpKernelExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/HttpKernelRuntime.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/LogoutUrlExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/ProfilerExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/RoutingExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/SecurityExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/StopwatchExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/TranslationExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/WebLinkExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/WorkflowExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Extension/YamlExtension.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Form/TwigRendererEngine.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/DumpNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/FormThemeNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/RenderBlockNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/SearchAndRenderBlockNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/StopwatchNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/TransDefaultDomainNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/Node/TransNode.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/NodeVisitor/Scope.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/NodeVisitor/TranslationDefaultDomainNodeVisitor.php'
+[Warn  - 3:50:40 PM] Error: ENOENT: no such file or directory, open '/var/www/mysite/vendor/composer/95953582/symfony-twig-bridge-ac6f9fa/NodeVisitor/TranslationNodeVisitor.php'
+[Info  - 3:50:40 PM] Indexing ended. 34 files indexed in 0s.
+[Info  - 3:50:40 PM] Indexing started.
+[Info  - 3:50:42 PM] Indexing ended. 80 files indexed in 1s.
+[Info  - 3:50:45 PM] Indexing started.
+[Info  - 3:50:46 PM] Indexing ended. 8 files indexed in 0s.
+[Info  - 3:51:58 PM] Indexing started.
+[Info  - 3:51:58 PM] Indexing ended. 8 files indexed in 0s.

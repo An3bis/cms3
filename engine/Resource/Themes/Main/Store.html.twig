@@ -1,0 +1,6 @@
+<ul>
+    {% for key,val in products %}
+    <li><a href="{{ val.url }}">{{ val.name }}</a> - {{ val.price }}$</li>
+    {% endfor %}
+</ul>
+<a href="/"><- Back</a>
